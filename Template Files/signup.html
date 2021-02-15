@@ -1,0 +1,58 @@
+{% extends 'Store/base.html'%}
+
+{% block content %}
+<div class="container">
+  <div class="p-4 m-4">
+<div>
+<h4 class="alert alert-light border rounded" style="margin-left:300px;width:300px;font-size:17px"><center>Create An Account</center></h4>
+<form action="/Store/signup1" method="post">
+{% csrf_token %}
+  <div class="mb-3 row">
+    <label for="First Name" class="col-sm-2 col-form-label">First Name*</label>
+    <div class="col-sm-7">
+      <input required type="text" class="form-control" id="Firstname" name="firstname" value={{fname}}><h6 style="color:red;font-size:13px">{{msg}}</h6>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label for="Last Name" class="col-sm-2 col-form-label">Last Name*</label>
+    <div class="col-sm-7">
+      <input required type="text" class="form-control" id="Lastname" name="lastname" value={{lname}}><h6 style="color:red;font-size:13px">{{msg1}}</h6>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label for="Last Name" class="col-sm-2 col-form-label">Phone No*</label>
+    <div class="col-sm-7">
+      <input required type="text" class="form-control" id="phoneno"  name="phoneno" placeholder="9875356772" value={{phone}}><h6 style="color:red;font-size:13px">{{msg3}}</h6>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label for="inputEmail" class="col-sm-2 col-form-label">Email*</label>
+    <div class="col-sm-7">
+      <input required type="text" name="email"  class="form-control-plaintext" id="staticEmail" style="border:1px solid lightgray;border-radius:3px" placeholder="example@gmail.com" value={{email}}><h6 style="color:red;font-size:13px">{{msg4}}</h6>
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Password*</label>
+    <div class="col-sm-7">
+      <input required type="password" class="form-control" id="inputPassword" name="password" placeholder="**********" value={{password}}><h6 style="color:red;font-size:13px">{{msg5}}</h6>
+    </div>
+  </div>
+<center>
+    <div class="form-group">
+    <input type="submit" class="btn btn-sm btn-info" value="SignUp" style="width:100px">
+
+      </div>
+</center>
+
+  </form>
+     {% if msg2 %}
+     <h6 style="color:green;margin-left:340px">{{msg2}}&#9989</h6>
+     {% endif %}
+  </div>
+
+    </div>
+    </div>
+{% endblock %}
