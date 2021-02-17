@@ -2,7 +2,7 @@
 
 i. This is an Ecommerce wep application based on Django Framework.
 
-ii. It maintains a cart in which user can add the products in the cart.
+ii. It maintains a cart in which user can add the products in the cart,After Payment the products are place into the order page.
 
 iii. User can see its order in the order page.
 
